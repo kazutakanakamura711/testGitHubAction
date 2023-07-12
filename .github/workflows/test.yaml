@@ -1,0 +1,18 @@
+name: test github action
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: test
+        run: |
+          echo "test"
